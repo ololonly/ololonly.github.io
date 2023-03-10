@@ -30,8 +30,8 @@
   "author": "Kostiashov Ivan <onlyno21@gmail.com>",
   "scripts": {
     "dev": "cross-env NODE_ENV=development CONTEXT=local webpack serve",
-    "prod": "cross-env NODE_ENV=prod CONTEXT=prod webpack serve",
-    "build": "cross-env NODE_ENV=prod CONTEXT=prod webpack",
+    "prod": "cross-env NODE_ENV=production CONTEXT=production webpack serve",
+    "build": "cross-env NODE_ENV=production CONTEXT=production webpack",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
