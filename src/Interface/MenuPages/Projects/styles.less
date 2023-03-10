@@ -1,0 +1,72 @@
+@import url(../../../variables.less);
+
+.projects-list-block {
+  display: grid;
+  width: fit-content;
+  gap: 2rem;
+}
+
+.project-block {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: @cardColor;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  //   box-shadow: 1px 1px px teal;
+  gap: 1rem;
+  font-family: @contentFontFamily;
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: @headerFontFamily;
+
+    .project-header__left {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+      justify-content: start;
+
+      .project-name {
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .project-achievements_header,
+  .project-resposibilities_header {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .project-achievements_block,
+  .project-resposibilities_block {
+    display: flex;
+    flex-direction: column;
+    // margin: 2rem 0;
+
+    .project-achievement,
+    .project-resposibility {
+      &::before {
+        font-size: 0.8rem;
+      }
+    }
+
+    .project-achievement::before {
+      content: "😎";
+    }
+
+    .project-resposibility::before {
+      content: "🤟";
+    }
+  }
+}

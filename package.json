@@ -1,0 +1,70 @@
+{
+  "name": "personal-page",
+  "version": "0.1.0",
+  "repository": {
+    "url": "git+https://github.com/ololonly/personal-page.git"
+  },
+  "homepage": "https://ololonly.github.io/personal-page",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "classnames": "^2.3.2",
+    "cross-env": "^7.0.3",
+    "express": "^4.18.2",
+    "gh-pages": "^5.0.0",
+    "mobx": "^6.7.0",
+    "mobx-react-lite": "^3.4.0",
+    "moment": "^2.29.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0"
+  },
+  "author": "Kostiashov Ivan <onlyno21@gmail.com>",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development CONTEXT=local webpack serve",
+    "prod": "cross-env NODE_ENV=prod CONTEXT=prod webpack serve",
+    "build": "cross-env NODE_ENV=prod CONTEXT=prod webpack",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "dotenv-webpack": "^7.0.3",
+    "esbuild-loader": "^2.21.0",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^4.1.3",
+    "less-loader": "^11.1.0",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss-loader": "^7.0.2",
+    "source-map-loader": "^4.0.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

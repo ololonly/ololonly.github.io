@@ -1,0 +1,52 @@
+@import url(../../variables.less);
+@avatarSize: 200px;
+@skew: 4deg;
+
+.sub-left_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sub-left_picture-container {
+  position: relative;
+  height: @avatarSize;
+  width: @avatarSize * 0.94;
+  outline: 8px solid darken(@fontColor, 20);
+  border-radius: 5px;
+  transform: skewX(-@skew);
+
+  .sub-left_picture {
+    height: 100%;
+    transform: skewX(@skew);
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 104%;
+    }
+  }
+}
+
+@media (max-width: 1512px) {
+  .sub-left_picture-container {
+    height: @avatarSize * 0.75;
+    width: @avatarSize * 0.75 * 0.95;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sub-left_picture-container {
+    height: @avatarSize * 0.6;
+    width: @avatarSize * 0.6 * 0.95;
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-left_picture-container {
+    height: @avatarSize * 0.5;
+    width: @avatarSize * 0.47;
+  }
+}

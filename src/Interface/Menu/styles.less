@@ -1,0 +1,61 @@
+@import url("../../variables.less");
+
+.menu-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10%;
+  font-family: @headerFontFamily;
+  font-size: 1.3rem;
+  height: inherit;
+}
+
+.menu-item {
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0.105rem;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+    background-color: rebeccapurple;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+  &:hover::before {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.menu-item__active {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.105rem;
+    left: 0;
+    bottom: 0;
+    background-color: rebeccapurple;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+  }
+}

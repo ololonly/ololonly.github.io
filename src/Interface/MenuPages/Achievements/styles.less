@@ -1,0 +1,100 @@
+@import url(../../../variables.less);
+
+:root {
+  --level-bars-color: lighten(black, 50);
+}
+
+.achievements-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.achievement-container {
+  background-color: @cardColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+  // box-shadow: 0.1rem 5px 10px teal;
+}
+
+.achievement-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: @headerFontFamily;
+  color: darken(@fontColor, 5);
+  font-size: 1.7rem;
+  height: 15%;
+}
+
+.achievement-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 75%;
+  img {
+    width: 80%;
+    transition: rotate 1.5s;
+    &:hover {
+      rotate: 360deg;
+    }
+  }
+}
+
+@keyframes fillSkill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.achievement-level {
+  display: flex;
+  width: 90%;
+  height: 5%;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 0.2rem;
+  padding-bottom: 7%;
+
+  &:nth-last-child(1) {
+    &::after {
+      position: relative;
+      right: 1.5%;
+      top: 30%;
+      height: 0.3rem;
+      width: 0.05rem;
+      border: 0.05rem solid var(--level-bars-color);
+      background-color: var(--level-bars-color);
+      content: "";
+    }
+  }
+
+  .achievement-level-bar {
+    display: block;
+    flex-grow: 1;
+    border: 0.05rem solid var(--level-bars-color);
+    border-radius: 0.1rem;
+
+    .achievement-level-bar__filler {
+      height: 100%;
+      width: 0%;
+      background-color: darken(lightgreen, 30);
+      animation: fillSkill;
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.5s;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
+  }
+}
