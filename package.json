@@ -2,9 +2,9 @@
   "name": "personal-page",
   "version": "0.1.0",
   "repository": {
-    "url": "git+https://github.com/ololonly/personal-page.git"
+    "url": "git+https://github.com/ololonly/ololonly.github.io.git"
   },
-  "homepage": "https://ololonly.github.io/personal-page",
+  "homepage": "https://ololonly.github.io/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
