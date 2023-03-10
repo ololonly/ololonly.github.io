@@ -1,0 +1,375 @@
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/index.less ***!
+  \*******************************************************************************************************************************************************************************/
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/lato/v23/S6uyw4BMUTPHvxk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Phudu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/phudu/v1/0FlJVPSHk0ya-7OUeO_U-Lwm7PkKtWzUSw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/satisfy/v17/rP2Hp2yn6lkG50LoOZQ.ttf) format('truetype');
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #00c5c8;
+}
+body,
+html {
+  height: 100%;
+  background-color: #212121;
+}
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+}
+
+/*!***********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/variables.less ***!
+  \***********************************************************************************************************************************************************************************/
+
+/*!**********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/MenuPages/About/styles.less ***!
+  \**********************************************************************************************************************************************************************************************************/
+.about-container {
+  display: flex;
+}
+
+/*!*****************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/MenuPages/Achievements/styles.less ***!
+  \*****************************************************************************************************************************************************************************************************************/
+:root {
+  --level-bars-color: #808080;
+}
+.achievements-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.achievement-container {
+  background-color: rgba(175, 175, 175, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+}
+.achievement-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Phudu", sans-serif;
+  color: #00acaf;
+  font-size: 1.7rem;
+  height: 15%;
+}
+.achievement-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 75%;
+}
+.achievement-logo img {
+  width: 80%;
+  transition: rotate 1.5s;
+}
+.achievement-logo img:hover {
+  rotate: 360deg;
+}
+@keyframes fillSkill {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.achievement-level {
+  display: flex;
+  width: 90%;
+  height: 5%;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 0.2rem;
+  padding-bottom: 7%;
+}
+.achievement-level:nth-last-child(1)::after {
+  position: relative;
+  right: 1.5%;
+  top: 30%;
+  height: 0.3rem;
+  width: 0.05rem;
+  border: 0.05rem solid var(--level-bars-color);
+  background-color: var(--level-bars-color);
+  content: "";
+}
+.achievement-level .achievement-level-bar {
+  display: block;
+  flex-grow: 1;
+  border: 0.05rem solid var(--level-bars-color);
+  border-radius: 0.1rem;
+}
+.achievement-level .achievement-level-bar .achievement-level-bar__filler {
+  height: 100%;
+  width: 0%;
+  background-color: #1ec71e;
+  animation: fillSkill;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+/*!*************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/MenuPages/Projects/styles.less ***!
+  \*************************************************************************************************************************************************************************************************************/
+.projects-list-block {
+  display: grid;
+  width: fit-content;
+  gap: 2rem;
+}
+.project-block {
+  display: flex;
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border-style: none;
+  background-color: rgba(175, 175, 175, 0.1);
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  border-radius: 0.5rem;
+  gap: 1rem;
+  font-family: "Lato", sans-serif;
+}
+.project-block .project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family: "Phudu", sans-serif;
+}
+.project-block .project-header .project-header__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  justify-content: start;
+}
+.project-block .project-header .project-header__left .project-name {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.project-block .project-achievements_header,
+.project-block .project-resposibilities_header {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.project-block .project-achievements_block,
+.project-block .project-resposibilities_block {
+  display: flex;
+  flex-direction: column;
+}
+.project-block .project-achievements_block .project-achievement::before,
+.project-block .project-resposibilities_block .project-achievement::before,
+.project-block .project-achievements_block .project-resposibility::before,
+.project-block .project-resposibilities_block .project-resposibility::before {
+  font-size: 0.8rem;
+}
+.project-block .project-achievements_block .project-achievement::before,
+.project-block .project-resposibilities_block .project-achievement::before {
+  content: "😎";
+}
+.project-block .project-achievements_block .project-resposibility::before,
+.project-block .project-resposibilities_block .project-resposibility::before {
+  content: "🤟";
+}
+
+/*!**************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/SubLeft/styles.less ***!
+  \**************************************************************************************************************************************************************************************************/
+.sub-left_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sub-left_picture-container {
+  position: relative;
+  height: 200px;
+  width: 188px;
+  outline: 8px solid #006162;
+  border-radius: 5px;
+  transform: skewX(-4deg);
+}
+.sub-left_picture-container .sub-left_picture {
+  height: 100%;
+  transform: skewX(4deg);
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub-left_picture-container .sub-left_picture img {
+  height: 104%;
+}
+@media (max-width: 1512px) {
+  .sub-left_picture-container {
+    height: 150px;
+    width: 142.5px;
+  }
+}
+@media (max-width: 1000px) {
+  .sub-left_picture-container {
+    height: 120px;
+    width: 114px;
+  }
+}
+@media (max-width: 768px) {
+  .sub-left_picture-container {
+    height: 100px;
+    width: 94px;
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/ContentContainer/styles.less ***!
+  \***********************************************************************************************************************************************************************************************************/
+.main-container {
+  display: inline-flex;
+  margin-top: 10px;
+  width: 100%;
+}
+.main-container .sub-left {
+  padding-top: 10px;
+  width: 15%;
+  height: 100%;
+}
+.main-container .sub-right {
+  width: 85%;
+}
+.main-container .sub-right .content-animated {
+  animation: appear 1s forwards;
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*!*************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/Header/styles.less ***!
+  \*************************************************************************************************************************************************************************************************/
+header {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 20%;
+  height: 50px;
+  background-color: #1c1c1c;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.name {
+  font-family: "Satisfy", cursive;
+  font-size: 2rem;
+  position: absolute;
+  left: 10px;
+  user-select: none;
+}
+@media (max-width: 768px) {
+  header {
+    padding: 20px 0;
+    height: 160px;
+  }
+  .name {
+    position: relative;
+    display: block;
+  }
+}
+
+/*!***********************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js!./node_modules/less-loader/dist/cjs.js!./src/Interface/Menu/styles.less ***!
+  \***********************************************************************************************************************************************************************************************/
+.menu-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10%;
+  font-family: "Phudu", sans-serif;
+  font-size: 1.3rem;
+  height: inherit;
+}
+.menu-item {
+  position: relative;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+.menu-item::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 0.105rem;
+  left: 0;
+  bottom: 0;
+  visibility: hidden;
+  background-color: rebeccapurple;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+.menu-item:hover::before {
+  width: 100%;
+  visibility: visible;
+}
+.menu-item__active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.105rem;
+  left: 0;
+  bottom: 0;
+  background-color: rebeccapurple;
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .menu-container {
+    flex-direction: column;
+  }
+}
+
