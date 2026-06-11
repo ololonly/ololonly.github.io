@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* ── Design tokens ─────────────────────────────────────────────── */
+@theme {
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* graphite-black surfaces */
+  --color-bg: #0a0a0c;
+  --color-surface: #101014;
+  --color-surface-2: #16161c;
+  --color-border: #23232b;
+  --color-border-strong: #32323d;
+
+  /* text */
+  --color-fg: #e7e7ea;
+  --color-muted: #9a9aa6;
+  --color-dim: #6a6a76;
+
+  /* violet accent */
+  --color-accent: #a78bfa;
+  --color-accent-bright: #c4b5fd;
+  --color-accent-dim: #7c6bd6;
+
+  /* terminal semantic colors */
+  --color-term-green: #6ee7a8;
+  --color-term-yellow: #fcd34d;
+  --color-term-red: #fb7185;
+  --color-term-cyan: #67e8f9;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-mono);
+    font-feature-settings: "calt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 35%, transparent);
+    color: var(--color-accent-bright);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: 6px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent-dim);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+/* ── Reusable utilities ────────────────────────────────────────── */
+@utility glow-accent {
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-accent) 40%, transparent),
+    0 0 24px -4px color-mix(in srgb, var(--color-accent) 45%, transparent);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 18px color-mix(in srgb, var(--color-accent) 55%, transparent);
+}
+
+/* blinking terminal cursor */
+.cursor-blink::after {
+  content: "▋";
+  margin-left: 2px;
+  color: var(--color-accent);
+  animation: blink 1.05s steps(1) infinite;
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

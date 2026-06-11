@@ -1,19 +1,29 @@
-import React from "react";
-import { observer } from "mobx-react-lite";
-import ContentContainer from "./Interface/ContentContainer/ContentContainer";
-import Header from "./Interface/Header/Header";
-import Menu from "./Interface/Menu/Menu";
-import state from "./mobx/state";
+import Background from "./components/Background";
+import ScrollProgress from "./components/ScrollProgress";
+import NavBar from "./components/NavBar";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Experience from "./sections/Experience";
+import Projects from "./sections/Projects";
+import Credentials from "./sections/Credentials";
+import Contact from "./sections/Contact";
 
-const App: React.FC = observer(() => {
+export default function App() {
   return (
     <>
-      <Header title="Ivan Kostiashov">
-        <Menu menu={state.Menu} />
-      </Header>
-      <ContentContainer />
+      <Background />
+      <ScrollProgress />
+      <NavBar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Credentials />
+        <Contact />
+      </main>
     </>
   );
-});
-
-export default App;
+}
