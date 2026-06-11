@@ -58,7 +58,7 @@ export default function Contact() {
           <span className="text-[var(--color-term-green)]">$</span> built by {profile.name} ·
           React · Tailwind · Framer Motion
         </p>
-        <p>© {new Date().getFullYear()} · {profile.handle}.github.io</p>
+        <p>© {new Date().getFullYear()} · iam.waytoo.dev</p>
       </footer>
     </section>
   );
