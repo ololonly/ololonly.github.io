@@ -104,6 +104,15 @@
   }
 }
 
+/* hide scrollbar but keep the element scrollable (swipeable on touch) */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

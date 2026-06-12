@@ -1,7 +1,8 @@
 import { projects } from "../data/resume";
-import { SectionHeading, Reveal } from "../components/primitives";
+import { Reveal } from "../components/primitives";
 import { StarIcon, ArrowIcon, GithubIcon } from "../components/icons";
 import { useGithubStars } from "../hooks/useGithubStars";
+import SessionBlock from "../components/transcript/SessionBlock";
 
 const projectUrls = projects.map((p) => p.url);
 
@@ -9,9 +10,7 @@ export default function Projects() {
   const liveStars = useGithubStars(projectUrls);
 
   return (
-    <section id="projects" className="mx-auto max-w-5xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28">
-      <SectionHeading cmd="ls -la ~/projects" title="Projects" />
-
+    <SessionBlock id="projects" command="gh repo list ololonly">
       <div className="grid gap-5 sm:grid-cols-2">
         {projects.map((p, i) => {
           const stars = liveStars[p.url] ?? p.stars;
@@ -62,6 +61,6 @@ export default function Projects() {
           );
         })}
       </div>
-    </section>
+    </SessionBlock>
   );
 }

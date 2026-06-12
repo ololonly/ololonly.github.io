@@ -103,6 +103,8 @@ export type Job = {
   location: string;
   bullets: string[];
   stack?: string;
+  /** fake 7-char commit hash for the `git log` rendering of Experience */
+  hash: string;
 };
 
 export const experience: Job[] = [
@@ -112,6 +114,7 @@ export const experience: Job[] = [
     kind: "Full-time",
     period: "May 2022 — Present",
     location: "Antalya, Türkiye",
+    hash: "f3a9c1e",
     bullets: [
       "Building a VSTO add-in for Microsoft Project — internal apps portfolio for a world Top-5 pharmaceutical company.",
       "Migrated backend & shared components from .NET Framework to .NET 8 (multi-target where VSTO required), adopting Clean Architecture.",
@@ -129,6 +132,7 @@ export const experience: Job[] = [
     kind: "Freelance",
     period: "May 2020 — Apr 2022",
     location: "Moscow, Russia",
+    hash: "b7d4e02",
     bullets: [
       "Designed and built a self-written CRM for a music label as both architect and developer.",
       "Designed the PostgreSQL schema and the ASP.NET Core + EF Core data-access layer.",
@@ -144,6 +148,7 @@ export const experience: Job[] = [
     kind: "Full-time",
     period: "Feb 2020 — Apr 2022",
     location: "Moscow, Russia",
+    hash: "9c2f681",
     bullets: [
       "Microsoft Dynamics CRM 2016 on-premises development and customization.",
       "Integrated a recommendation system that increased managers' call efficiency by 40%.",
@@ -159,6 +164,7 @@ export const experience: Job[] = [
     kind: "Full-time",
     period: "Aug 2018 — Feb 2020",
     location: "Moscow, Russia",
+    hash: "5e0a3f8",
     bullets: [
       "Microsoft Dynamics CRM 2016 on-premises development.",
       "Introduced ReactJS into the company's tech stack; migrated UI from ActiveX to React.",
@@ -223,3 +229,14 @@ export const social = {
   telegram: "https://t.me/ololonly",
   email: "iam@waytoo.dev",
 };
+
+export type NavSection = { id: string; label: string };
+
+export const navSections: NavSection[] = [
+  { id: "about", label: "about" },
+  { id: "skills", label: "skills" },
+  { id: "experience", label: "experience" },
+  { id: "projects", label: "projects" },
+  { id: "credentials", label: "credentials" },
+  { id: "contact", label: "contact" },
+];

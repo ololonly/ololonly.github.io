@@ -1,11 +1,10 @@
 import { certs, education } from "../data/resume";
-import { SectionHeading, Reveal } from "../components/primitives";
+import { Reveal } from "../components/primitives";
+import SessionBlock from "../components/transcript/SessionBlock";
 
 export default function Credentials() {
   return (
-    <section id="credentials" className="mx-auto max-w-5xl scroll-mt-20 px-5 py-20 sm:px-8 sm:py-28">
-      <SectionHeading cmd="cat ~/.credentials" title="Education & Certs" />
-
+    <SessionBlock id="credentials" command="ls ~/credentials/">
       <div className="grid gap-5 lg:grid-cols-2">
         <Reveal>
           <div className="h-full rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)]/60 p-6">
@@ -44,6 +43,6 @@ export default function Credentials() {
           </div>
         </Reveal>
       </div>
-    </section>
+    </SessionBlock>
   );
 }

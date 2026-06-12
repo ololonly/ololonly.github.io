@@ -123,20 +123,3 @@ export function CountUp({ to, suffix = "" }: { to: number; suffix?: string }) {
     </span>
   );
 }
-
-/* ── Section heading rendered as a man-page / shell command ────── */
-export function SectionHeading({ cmd, title }: { cmd: string; title: string }) {
-  return (
-    <Reveal className="mb-8 sm:mb-10">
-      <div className="flex items-baseline gap-3 font-mono">
-        <span className="text-[var(--color-term-green)]">$</span>
-        <span className="text-[var(--color-accent)]">{cmd}</span>
-        <span className="cursor-blink" aria-hidden />
-      </div>
-      <h2 className="mt-3 text-2xl sm:text-3xl font-semibold tracking-tight text-[var(--color-fg)]">
-        {title}
-      </h2>
-      <div className="mt-4 h-px w-full bg-gradient-to-r from-[var(--color-accent)]/60 via-[var(--color-border)] to-transparent" />
-    </Reveal>
-  );
-}
