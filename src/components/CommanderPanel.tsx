@@ -64,16 +64,13 @@ export default function CommanderPanel() {
           break;
         case "Enter":
           e.preventDefault();
-          setSelected((s) => {
-            navigate(navSections[s].id);
-            return s;
-          });
+          navigate(navSections[selected].id);
           break;
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [navigate]);
+  }, [navigate, selected]);
 
   return (
     <div ref={containerRef} className="overflow-hidden rounded-lg border border-[var(--color-border)] text-xs sm:text-sm">
