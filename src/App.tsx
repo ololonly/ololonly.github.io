@@ -28,7 +28,7 @@ export default function App() {
           <span className="h-3 w-3 rounded-full bg-[#fcd34d]/80" />
           <span className="h-3 w-3 rounded-full bg-[#6ee7a8]/80" />
           <span className="ml-3 truncate text-xs text-[var(--color-dim)]">
-            ivan@waytoo.dev: ~ — tmux
+            iam@waytoo.dev: ~ — tmux
           </span>
         </div>
       </div>

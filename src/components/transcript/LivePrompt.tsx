@@ -138,7 +138,7 @@ export default function LivePrompt() {
         onClick={focusInput}
       >
         <span className="flex items-baseline gap-1 shrink-0">
-          <span className="text-[var(--color-term-green)]">ivan@waytoo.dev</span>
+          <span className="text-[var(--color-term-green)]">iam@waytoo.dev</span>
           <span className="text-[var(--color-dim)]">:</span>
           <span className="text-[var(--color-term-cyan)]">~</span>
           <span className="text-[var(--color-dim)]">$</span>

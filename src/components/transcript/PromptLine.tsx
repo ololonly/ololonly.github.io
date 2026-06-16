@@ -10,7 +10,7 @@ export default function PromptLine({
   return (
     <div className="flex flex-wrap items-baseline gap-x-2 font-mono text-sm sm:text-base">
       <span className="flex items-baseline gap-1">
-        <span className="text-[var(--color-term-green)]">ivan@waytoo.dev</span>
+        <span className="text-[var(--color-term-green)]">iam@waytoo.dev</span>
         <span className="text-[var(--color-dim)]">:</span>
         <span className="text-[var(--color-term-cyan)]">{path}</span>
         <span className="text-[var(--color-dim)]">$</span>

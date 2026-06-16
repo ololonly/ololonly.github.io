@@ -51,8 +51,8 @@ export function Stagger({
 }
 
 export const staggerItem = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.21, 0.5, 0.3, 1] } },
+  hidden: { opacity: 0 },
+  show: { opacity: 1, transition: { duration: 0.4, ease: [0.21, 0.5, 0.3, 1] } },
 };
 
 /* ── Typewriter: cycles through words ──────────────────────────── */
