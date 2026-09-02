@@ -248,12 +248,6 @@ export const certs: Cert[] = [
     name: "Claude Certified Architect — Foundations (Early Adopter)",
     issuer: "Anthropic",
     date: "Apr 2026",
-    credentialId: "m2t8q3psw7yc",
-  },
-  {
-    name: "Claude Certified Architect — Foundations",
-    issuer: "Anthropic",
-    date: "Apr 2026",
     credentialId: "w7muq7ztwuoa",
     url: "https://www.credly.com/badges/a2fdeb76-cc9c-4523-a9b5-77eb23350687/public_url",
   },
