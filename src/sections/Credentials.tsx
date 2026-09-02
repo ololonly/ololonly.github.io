@@ -26,10 +26,23 @@ export default function Credentials() {
             </div>
             <ul className="space-y-4">
               {certs.map((c) => (
-                <li key={c.credentialId} className="flex gap-3">
+                <li key={c.name} className="flex gap-3">
                   <span className="mt-1 text-[var(--color-term-green)]">✓</span>
                   <div>
-                    <p className="text-sm font-medium text-[var(--color-fg)]">{c.name}</p>
+                    <p className="text-sm font-medium text-[var(--color-fg)]">
+                      {c.url ? (
+                        <a
+                          href={c.url}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="underline decoration-[var(--color-border-strong)] underline-offset-4 transition-colors hover:text-[var(--color-accent-bright)] hover:decoration-[var(--color-accent)]"
+                        >
+                          {c.name}
+                        </a>
+                      ) : (
+                        c.name
+                      )}
+                    </p>
                     <p className="mt-0.5 font-mono text-xs text-[var(--color-dim)]">
                       {c.issuer} · {c.date}
                       {c.credentialId && (

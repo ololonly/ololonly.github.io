@@ -1,15 +1,16 @@
 export const profile = {
   name: "Ivan Kostiashov",
   handle: "ololonly",
-  role: "Senior Fullstack Engineer",
-  tagline: ".NET / React · Azure · Clean Architecture · AI Tooling",
+  role: "Senior TypeScript Fullstack Engineer",
+  tagline:
+    "TypeScript / React / Node.js · SPFx · Azure Functions · GitHub Actions · AI Tooling",
   location: "Antalya, Türkiye",
   // rotating words for the hero typewriter
   roles: [
-    "Senior Fullstack Engineer",
-    ".NET & Azure specialist",
-    "Clean Architecture practitioner",
-    "Enterprise integration engineer",
+    "Senior TypeScript Fullstack Engineer",
+    "React / SPFx & Node.js developer",
+    "GitHub Actions & DevOps enabler",
+    "ex-.NET enterprise integrator",
     "Home-lab tinkerer",
   ],
   resumeUrl: "", // optional: link to a PDF if you add one to /public
@@ -17,15 +18,17 @@ export const profile = {
 
 export const about = {
   lines: [
-    "Senior Fullstack Engineer with 8 years in enterprise integrations and cloud-native systems on .NET and Azure.",
-    "For 4 years at EPAM I've been building a VSTO add-in for Microsoft Project — part of a drug-certification workflow used globally by a Top-5 pharmaceutical company.",
-    "The add-in integrates with Dynamics 365 Planner Premium via the PSS Schedule API and Dataverse, with background processing on Azure: Functions, Service Bus, web services.",
-    "I use AI tooling in daily work — Claude Code with custom sub-agent workflows, Cursor, GitHub Copilot. Not as productivity theatre, but as the actual way I work through unfamiliar codebases and integration problems.",
+    "Senior TypeScript Fullstack Engineer with 8 years in enterprise systems — now fully on TypeScript across the stack, after 4 years of C#/.NET before that.",
+    "At EPAM I'm building an enterprise IT-asset management portal for a world Top-5 pharmaceutical company: a library of SPFx components on React/TypeScript on the front, Azure Functions on Node.js on the back.",
+    "I also own DevOps for the team's move to GitHub Enterprise — repository migration, reusable CI/CD workflows for SPFx, Azure Functions and npm packages, release automation, commit linting, and a GitHub Copilot plugin with our team's context.",
+    "ex-.NET: 4 years building a C#/VSTO add-in for Microsoft Project with Dynamics 365 / Dataverse integrations and Azure background processing, then a full switch to TypeScript.",
+    "I use AI tooling in daily work — Claude Code with custom sub-agent workflows and GitHub Copilot with a custom team plugin. Not as productivity theatre, but as the actual way I work through unfamiliar codebases and integration problems.",
   ],
   facts: [
     ["uptime", "8 years in production"],
     ["base", "Antalya, Türkiye"],
-    ["focus", ".NET 8 · Azure · React/TS"],
+    ["focus", "TypeScript · React/SPFx · Node.js · Azure Functions"],
+    ["prev", "ex-.NET — 4 years of C#/VSTO"],
     ["fuel", "espresso (self-hosted)"],
   ] as [string, string][],
 };
@@ -38,23 +41,11 @@ export const skillGroups: SkillGroup[] = [
     label: "languages",
     cmd: "ls ~/languages",
     items: [
-      { name: "C#", slug: "csharp" },
       { name: "TypeScript", slug: "typescript" },
       { name: "JavaScript", slug: "javascript" },
+      { name: "C# (ex)", slug: "csharp" },
       { name: "SQL" },
       { name: "Rust", slug: "rust" },
-    ],
-  },
-  {
-    label: "backend",
-    cmd: "ls ~/backend",
-    items: [
-      { name: ".NET 8", slug: "dotnet" },
-      { name: "ASP.NET Core", slug: "dotnet" },
-      { name: "EF Core", slug: "dotnet" },
-      { name: "VSTO" },
-      { name: "WCF / Web API" },
-      { name: "gRPC" },
     ],
   },
   {
@@ -62,9 +53,31 @@ export const skillGroups: SkillGroup[] = [
     cmd: "ls ~/frontend",
     items: [
       { name: "React", slug: "react" },
+      { name: "SPFx (SharePoint Framework)" },
       { name: "TypeScript", slug: "typescript" },
       { name: "Vite", slug: "vite" },
       { name: "Tailwind", slug: "tailwindcss" },
+    ],
+  },
+  {
+    label: "backend",
+    cmd: "ls ~/backend",
+    items: [
+      { name: "Node.js", slug: "nodedotjs" },
+      { name: "Azure Functions", slug: "azure" },
+      { name: "REST / Web API" },
+      { name: "gRPC" },
+    ],
+  },
+  {
+    label: "ex-.net",
+    cmd: "ls ~/archive/dotnet",
+    items: [
+      { name: ".NET 8", slug: "dotnet" },
+      { name: "ASP.NET Core", slug: "dotnet" },
+      { name: "EF Core", slug: "dotnet" },
+      { name: "VSTO" },
+      { name: "WCF" },
     ],
   },
   {
@@ -82,14 +95,22 @@ export const skillGroups: SkillGroup[] = [
     ],
   },
   {
-    label: "ops & ai",
-    cmd: "ls ~/ops",
+    label: "devops",
+    cmd: "ls ~/devops",
     items: [
+      { name: "GitHub Actions", slug: "githubactions" },
+      { name: "GitHub Enterprise", slug: "github" },
+      { name: "JFrog Artifactory", slug: "jfrog" },
       { name: "Azure DevOps", slug: "azuredevops" },
       { name: "Docker", slug: "docker" },
       { name: "Linux", slug: "linux" },
+    ],
+  },
+  {
+    label: "ai",
+    cmd: "ls ~/ai",
+    items: [
       { name: "Claude Code", slug: "anthropic" },
-      { name: "Cursor" },
       { name: "GitHub Copilot", slug: "github" },
     ],
   },
@@ -109,14 +130,32 @@ export type Job = {
 
 export const experience: Job[] = [
   {
-    role: "Senior Software Engineer",
+    role: "Senior TypeScript Fullstack Engineer",
     company: "EPAM Systems",
     kind: "Full-time",
-    period: "May 2022 — Present",
+    period: "Jul 2026 — Present",
+    location: "Antalya, Türkiye",
+    hash: "a1c7e5d",
+    bullets: [
+      "Building an enterprise IT-asset management portal for a world Top-5 pharmaceutical company.",
+      "Frontend: a library of SPFx components on React/TypeScript. Backend: Azure Functions on Node.js.",
+      "Own DevOps for the team's migration to GitHub Enterprise — designed and rolled out the repository migration process.",
+      "Built reusable GitHub Actions workflows for CI/CD: SPFx component build & deploy, Azure Functions deploy, and npm package publishing to JFrog Artifactory with automated versioning and release creation.",
+      "Introduced commit linting across the team's repositories.",
+      "Built a GitHub Copilot plugin that carries our team's working context; use Claude Code with custom sub-agent workflows daily.",
+    ],
+    stack:
+      "TypeScript · React · SPFx · Node.js · Azure Functions · GitHub Actions · GitHub Enterprise · JFrog Artifactory",
+  },
+  {
+    role: "Senior Software Engineer (.NET)",
+    company: "EPAM Systems",
+    kind: "Full-time · ex-.NET stage",
+    period: "May 2022 — Jul 2026",
     location: "Antalya, Türkiye",
     hash: "f3a9c1e",
     bullets: [
-      "Building a VSTO add-in for Microsoft Project — internal apps portfolio for a world Top-5 pharmaceutical company.",
+      "4 years building a C#/VSTO add-in for Microsoft Project — internal apps portfolio for a world Top-5 pharmaceutical company — before a full switch to TypeScript.",
       "Migrated backend & shared components from .NET Framework to .NET 8 (multi-target where VSTO required), adopting Clean Architecture.",
       "Built the integration layer between MS Project and Dynamics 365 Planner Premium via PSS Schedule API & Dataverse, handling async OperationSet lifecycle.",
       "Implemented structured logging from on-prem to Azure Application Insights — end-to-end request tracing across hybrid infrastructure.",
@@ -200,6 +239,8 @@ export type Cert = {
   issuer: string;
   date: string;
   credentialId?: string;
+  /** public badge / verification URL */
+  url?: string;
 };
 
 export const certs: Cert[] = [
@@ -214,12 +255,21 @@ export const certs: Cert[] = [
     issuer: "Anthropic",
     date: "Apr 2026",
     credentialId: "w7muq7ztwuoa",
+    url: "https://www.credly.com/badges/a2fdeb76-cc9c-4523-a9b5-77eb23350687/public_url",
+  },
+  {
+    name: "Certified Partner Specialist — Gemini Enterprise Agent Development",
+    issuer: "Google Cloud",
+    date: "Jul 2026",
+    url: "https://www.credly.com/badges/885a111c-b8b0-421c-bf41-caac265adf90/public_url",
   },
 ];
 
 export const education = {
-  school: "Moscow Technical University of Communications and Informatics (MTUCI)",
-  degree: "Bachelor's — Computer & Information Systems Security / Data Protection",
+  school:
+    "Moscow Technical University of Communications and Informatics (MTUCI)",
+  degree:
+    "Bachelor's — Computer & Information Systems Security / Data Protection",
   period: "2014 — 2018",
 };
 
